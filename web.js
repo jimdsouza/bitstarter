@@ -1,11 +1,11 @@
 var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
-var buff = fs.readFileSync(index.html);
+var buff = fs.readFileSync('~/bitstarter/index.html');
 
 buf = new Buffer(buff);
 app.get('/', function(request, response) {
-  response.send('buff.toString()');
+  response.send(buff.toString());
 });
 
 var port = process.env.PORT || 5000;
