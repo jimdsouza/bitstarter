@@ -3,9 +3,9 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 var buff = fs.readFileSync('~/bitstarter/index.html');
 
-buf = new Buffer(buff);
+var buf = new Buffer(buff);
 app.get('/', function(request, response) {
-  response.send(buff.toString());
+  response.send(buf.toString());
 });
 
 var port = process.env.PORT || 5000;
